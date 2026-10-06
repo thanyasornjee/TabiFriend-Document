@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Help Center - TabiFriend (ศูนย์ช่วยเหลือและติดต่อสอบถาม)</title>
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 24px 16px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 40px 32px;
+            border: 1px solid var(--border);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: #eff6ff;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .lang-switch {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .lang-btn {
+            background: #f1f5f9;
+            border: 1px solid var(--border);
+            padding: 6px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .contact-card h2 {
+            font-size: 1.3rem;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: #3b4252;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+
+        .email-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .email-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .info-row {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        h2.section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            padding: 16px 20px;
+            background: #fafafa;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #0f172a;
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <span class="app-badge">TabiFriend for iOS</span>
+            <h1 id="title">ศูนย์ช่วยเหลือและฝ่ายสนับสนุน (Support)</h1>
+            <div class="subtitle" id="subtitle">เราพร้อมช่วยเหลือและรับฟังทุกข้อเสนอแนะในการใช้งาน TabiFriend</div>
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="switchLang('th')">ภาษาไทย (TH)</button>
+                <button class="lang-btn" onclick="switchLang('en')">English (EN)</button>
+            </div>
+        </div>
+
+        <!-- THAI CONTENT -->
+        <div id="content-th">
+            <div class="contact-card">
+                <h2>ต้องการความช่วยเหลือหรือแจ้งปัญหา?</h2>
+                <p>ทีมพัฒนา TabiHome ยินดีช่วยเหลือคุณ หากพบปัญหาการใช้งาน มีข้อสงสัย หรือต้องการแนะนำฟีเจอร์ใหม่</p>
+                <a href="mailto:tabihomeofficial@gmail.com?subject=[TabiFriend Support] ข้อสอบถามหรือแจ้งปัญหา" class="email-btn">
+                    ✉️ ส่งอีเมลหาเรา (tabihomeofficial@gmail.com)
+                </a>
+                <div class="info-row">เราจะตอบกลับโดยเร็วที่สุดภายใน 24 - 48 ชั่วโมง</div>
+            </div>
+
+            <h2 class="section-title">คำถามที่พบบ่อย (FAQ)</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">1. วิธีแชร์ทริปและชวนเพื่อนเข้าร่วมทำอย่างไร?</div>
+                <div class="faq-answer">
+                    ในหน้า Overview คุณจะเห็น <strong>"รหัสเข้าร่วมทริป" (Join Code 6 หลัก)</strong> สามารถกดปุ่มคัดลอกแล้วส่งให้เพื่อนได้ทันที เพื่อนเพียงเปิดแอปแล้วเลือก "เข้าร่วมทริปด้วยรหัส" ก็จะสามารถดูแผนและจัดการค่าใช้จ่ายร่วมกันได้แบบเรียลไทม์
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">2. จำเป็นต้องสมัครบัญชีหรือลงทะเบียนก่อนใช้งานหรือไม่?</div>
+                <div class="faq-answer">
+                    ไม่ต้องสมัครสมาชิกครับ TabiFriend ออกแบบมาให้คุณเปิดแอปแล้วเริ่มวางแผนทริปได้ทันทีโดยไม่ต้องจำรหัสผ่านหรือผูกอีเมลส่วนตัว
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">3. หากเปลี่ยนเครื่อง หรือลบแอป ข้อมูลทริปจะหายหรือไม่?</div>
+                <div class="faq-answer">
+                    ข้อมูลของทริปจะถูกจัดเก็บบนคลาวด์อย่างปลอดภัย เพียงคุณจำหรือจดบันทึกรหัสเข้าร่วมทริป (Join Code) เอาไว้ เมื่อติดตั้งแอปใหม่ก็สามารถนำรหัสมากรอกเพื่อดึงข้อมูลทริปทั้งหมดกลับมาได้ทันที
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">4. ฟังก์ชันหารเงิน (Settlement) และเงินกองกลางทำงานอย่างไร?</div>
+                <div class="faq-answer">
+                    ระบบคำนวณจะช่วยคำนวณยอดสุทธิ (Net Transfer) ให้อัตโนมัติ เพื่อให้โอนเงินเคลียร์หนี้กันด้วยจำนวนครั้งที่น้อยที่สุด ส่วนเงินกองกลางระบบจะบันทึกยอดเงินเข้า-ออก และแยกออกจากยอดหนี้ส่วนตัวอย่างชัดเจน
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">5. ต้องการลบข้อมูลทริปหรือออกจากทริปต้องทำอย่างไร?</div>
+                <div class="faq-answer">
+                    คุณสามารถกดออกจากทริปได้จากหน้าตั้งค่าทริป หรือหากเป็นผู้สร้างทริปและต้องการลบข้อมูลออกจากระบบคลาวด์อย่างถาวร สามารถส่งอีเมลแจ้งรหัสทริปมาที่ <a href="mailto:tabihomeofficial@gmail.com" style="color: var(--primary);">tabihomeofficial@gmail.com</a> ได้ตลอดเวลา
+                </div>
+            </div>
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="content-en" style="display: none;">
+            <div class="contact-card">
+                <h2>Need help or have feedback?</h2>
+                <p>The TabiHome team is here to assist you with any questions, bug reports, or feature suggestions.</p>
+                <a href="mailto:tabihomeofficial@gmail.com?subject=[TabiFriend Support] Inquiry or Feedback" class="email-btn">
+                    ✉️ Email Us (tabihomeofficial@gmail.com)
+                </a>
+                <div class="info-row">We typically reply within 24 - 48 hours.</div>
+            </div>
+
+            <h2 class="section-title">Frequently Asked Questions (FAQ)</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">1. How do I invite friends to collaborate on a trip?</div>
+                <div class="faq-answer">
+                    On your Trip Overview screen, locate your 6-character <strong>Join Code</strong>. Tap to copy and share it with your travel companions. They can enter this code in their app to instantly join and collaborate in real-time.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">2. Do I need to create an account or sign in?</div>
+                <div class="faq-answer">
+                    No account is required! TabiFriend is built for instant ease-of-use. You can organize your trips and split expenses without creating logins, passwords, or providing personal emails.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">3. What happens if I switch devices or reinstall the app?</div>
+                <div class="faq-answer">
+                    Your trip data is safely backed up to the cloud. Simply keep a record of your trip's Join Code, and you can re-enter it on any device to restore your itinerary, budget, and travel records.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">4. How does debt settlement and the central fund work?</div>
+                <div class="faq-answer">
+                    Our smart algorithm calculates the minimum number of net transfers needed to settle all debts among friends. Central fund expenses are tracked separately and deducted from the pool without creating unnecessary debts.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">5. How can I request permanent deletion of a trip?</div>
+                <div class="faq-answer">
+                    You can remove your local trip cache at any time by leaving the trip. For permanent deletion of shared cloud data, please email your trip Join Code to <a href="mailto:tabihomeofficial@gmail.com" style="color: var(--primary);">tabihomeofficial@gmail.com</a>.
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-links">
+            <a href="privacy-policy.html">นโยบายความเป็นส่วนตัว (Privacy Policy)</a> • 
+            <a href="mailto:tabihomeofficial@gmail.com">ติดต่อผู้พัฒนา (Contact Us)</a>
+        </div>
+
+        <footer>
+            &copy; 2026 TabiFriend by TabiHome. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            const thContent = document.getElementById('content-th');
+            const enContent = document.getElementById('content-en');
+            const title = document.getElementById('title');
+            const subtitle = document.getElementById('subtitle');
+            const buttons = document.querySelectorAll('.lang-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            if (lang === 'th') {
+                thContent.style.display = 'block';
+                enContent.style.display = 'none';
+                title.innerText = 'ศูนย์ช่วยเหลือและฝ่ายสนับสนุน (Support)';
+                subtitle.innerText = 'เราพร้อมช่วยเหลือและรับฟังทุกข้อเสนอแนะในการใช้งาน TabiFriend';
+                buttons[0].classList.add('active');
+            } else {
+                thContent.style.display = 'none';
+                enContent.style.display = 'block';
+                title.innerText = 'Help Center & Support';
+                subtitle.innerText = 'We are here to help and listen to your feedback for TabiFriend';
+                buttons[1].classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
